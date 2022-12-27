@@ -1,34 +1,28 @@
---Create a grocery store database
 
-CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, section TEXT, price INTEGER, popularity INTEGER);
+CREATE a clothing store database
 
-INSERT INTO store VALUES (1, "papaya", "produce", 2.99, 50);
-INSERT INTO store VALUES (2, "banana", "produce", 0.99, 95);
-INSERT INTO store VALUES (3, "qtips", "hygiene", 2.99, 55);
-INSERT INTO store VALUES (4, "beans", "bulk", 0.99, 50);
-INSERT INTO store VALUES (5, "beyond burgers", "meat", 4.99, 65);
-INSERT INTO store VALUES (6, "salsa", "fresh", 3.25, 43);
-INSERT INTO store VALUES (7, "hummus", "fresh", 2.99, 35);
-INSERT INTO store VALUES (8, "papaya", "hygiene", 2.99, 50);
-INSERT INTO store VALUES (9, "chick'n nuggs", "meat", 4.99, 75);
-INSERT INTO store VALUES (10, "peas", "frozen", 0.99, 25);
-INSERT INTO store VALUES (11, "smoothie berries", "frozen", 2.99, 33);
-INSERT INTO store VALUES (12, "granola", "bulk", 1.99, 80);
-INSERT INTO store VALUES (13, "vitamin D", "health", 8.99,29);
-INSERT INTO store VALUES (14, "nutritional yeast", "health", 2.99, 26);
-INSERT INTO store VALUES (15, "popcorn", "snacks", 1.99, 47);
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, aisle INTEGER);
 
---display the database ordered by price. 
-SELECT * FROM store
-ORDER BY price desc; 
+INSERT INTO clothing VALUES (1, 'pants', 10, 12.99, 1);
+INSERT INTO clothing VALUES (2, 'skirts', 20, 14.99, 2);
+INSERT INTO clothing VALUES (3, 'dresses', 16, 20.50, 2);
+INSERT INTO clothing VALUES (4, 'shorts', 14, 14.99, 3);
+INSERT INTO clothing VALUES (5, 'socks', 12, 13.99, 4);
+INSERT INTO clothing VALUES (6, 'jackets', 11, 25, 4);
+INSERT INTO clothing VALUES (7, 'sweaters', 10, 22, 5);
+INSERT INTO clothing VALUES (8, 'joggers', 12, 14.99, 5);
+INSERT INTO clothing VALUES (9, 'underwear', 11, 9.99, 1);
+INSERT INTO clothing VALUES (10, 'long sleeves', 8, 12.99, 3);
+INSERT INTO clothing VALUES (11, 'crop tops', 6, 12, 3);
+INSERT INTO clothing VALUES (12, 'leggings', 4, 10, 5);
+INSERT INTO clothing VALUES (13, 'shoes', 12, 13.99, 4);
+INSERT INTO clothing VALUES (14, 'tshirts', 6, 13.99, 3);
+INSERT INTO clothing VALUES (15, 'sweatpants', 12, 20, 4);
 
---what is the avg price of items in the bulk section? 
-SELECT AVG(price) "avg bulk item price"
-FROM store
-where section='bulk'; 
+-- displace the database order by price.
+SELECT * FROM clothing ORDER BY price desc;
 
---what are the most 5 popular items? 
-SELECT item, price, popularity
-FROM store
-order by popularity desc
-limit 5; 
+-- what is the avg price of clothing items?
+SELECT AVG(price) FROM clothing;
+
+
